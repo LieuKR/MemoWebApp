@@ -7,7 +7,7 @@
 
 ## 개발 목적
 새로운 개발 도구 활용
-- Vue.js, Spring boot, DB : MongoDB
+- Vue.js, Spring boot, GraphQL, DB : MongoDB
 - 모두 현재 시점((2022.09.20) 개발에 처음 활용해 보는 도구들
 
 ## 앱 구성 
