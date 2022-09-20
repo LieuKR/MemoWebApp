@@ -14,3 +14,8 @@
 1. Frontside : Vue.js Framework
 2. WAS : Spring boot
 3. DB : MongoDB
+
+## 디렉토리 구성
+- Dev_VueCLI : Vue-CLI로 구성된 로컬 프론트엔드 개발 환경
+- Server_ServeStaticWeb : Node.js로 구성된 Static Web Server
+- Server_API : Spring Boot로 구성된 WAS
