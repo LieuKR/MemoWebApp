@@ -10,7 +10,7 @@
       <router-link to="/auth/login">
         <span>로그인 / 회원가입</span>
       </router-link>
-      <router-link to="/appinfo">
+      <router-link to="/appinfo/wholeapp">
         <span>앱 정보</span>
       </router-link>
     </div>

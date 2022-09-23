@@ -3,8 +3,7 @@
     title="앱 정보"
     :pagetabs="pagetabs"
   />
-  <router-view/>
-  <h1>앱에 대한 간단한 설명</h1>
+  <h1><router-view/></h1>
 </template>
 
 <script>
@@ -14,9 +13,10 @@ export default {
   data () {
     return {
       pagetabs: [
-        { name: 'ClientSide', href: '/appinfo' },
-        { name: 'ServerSide', href: '/appinfo' },
-        { name: 'DB', href: '/appinfo' }
+        { name: 'WholeApp', href: '/appinfo/wholeapp' },
+        { name: 'ClientSide', href: '/appinfo/client' },
+        { name: 'ServerSide', href: '/appinfo/server' },
+        { name: 'DB', href: '/appinfo/db' }
       ]
     }
   },

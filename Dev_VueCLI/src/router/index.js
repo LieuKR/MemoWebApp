@@ -14,20 +14,35 @@ const routes = [
     children: [
       {
         path: 'login',
-        component: () => import(/* webpackChunkName: "login" */ '../views/auth/app-login.vue')
+        component: () => import(/* webpackChunkName: "auth" */ '../views/auth/app-login.vue')
       },
       {
         path: 'signin',
-        component: () => import(/* webpackChunkName: "signin" */ '../views/auth/app-signin.vue')
+        component: () => import(/* webpackChunkName: "auth" */ '../views/auth/app-signin.vue')
       }
     ]
   },
   {
     path: '/appinfo',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/appinfo/AboutView.vue')
+    component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/AboutView.vue'),
+    children: [
+      {
+        path: 'wholeapp',
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-wholeapp.vue')
+      },
+      {
+        path: 'client',
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-client.vue')
+      },
+      {
+        path: 'server',
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-server.vue')
+      },
+      {
+        path: 'db',
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-db.vue')
+      }
+    ]
   }
 ]
 
