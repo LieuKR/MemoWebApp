@@ -1,14 +1,14 @@
 <template>
-  <NavigationBar/>
+  <MainNavBar/>
   <router-view/>
 </template>
 
 <script>
-import NavigationBar from '@/components/NavigationBar.vue'
+import MainNavBar from '@/components/MainNavBar.vue'
 
 export default {
   components: {
-    NavigationBar
+    MainNavBar
   }
 }
 </script>
@@ -31,7 +31,7 @@ body
   flex-direction column
   width calc(100% - 40px)
   max-width 450px
-  margin 25px auto
+  margin 55px auto
   background-color #262e3a
   border-radius 8px
   overflow hidden
@@ -44,6 +44,13 @@ body
   font-weight 600
 .request-box .inputbox
   margin-bottom 15px
+.request-box a
+  display block
+  font-size 14px
+  margin-bottom 7px
+  font-weight 500
+  color white
+  text-decoration none
 .request-box .input-text label
   display: block;
   font-size 14px
@@ -74,4 +81,5 @@ body
   height: 40px;
   border-color: transparent;
   padding: 0px 10px;
+  margin-bottom: 15px;
 </style>

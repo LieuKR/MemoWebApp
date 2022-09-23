@@ -17,6 +17,9 @@
         </div>
       </div>
       <button class="submitbox" @click="submit">로그인</button>
+      <router-link to="/auth/signin">
+        <span>아직 회원이 아니신가요?</span>
+      </router-link>
     </div>
   </div>
 </template>

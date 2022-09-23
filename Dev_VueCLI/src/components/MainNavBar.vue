@@ -7,14 +7,11 @@
       </router-link>
     </div>
     <div class="navbar-center">
-      <router-link to="/login">
-        <span>Login</span>
+      <router-link to="/auth/login">
+        <span>로그인 / 회원가입</span>
       </router-link>
-      <router-link to="/signin">
-        <span>Signin</span>
-      </router-link>
-      <router-link to="/about">
-        <span>About</span>
+      <router-link to="/appinfo">
+        <span>앱 정보</span>
       </router-link>
     </div>
   </nav>
@@ -22,14 +19,14 @@
 
 <script>
 export default {
-  name: 'NavigationBar'
+  name: 'MainNavBar'
 }
 </script>
 
 <style scoped lang="stylus">
 nav
   display flex
-  background-color #262e3a
+  background-color #181d24
   height 50px
   padding 0px 15px
   color white
@@ -38,10 +35,6 @@ nav
 .navbar-center
   display inline-flex
   align-items: center
-.navbar-center a.router-link-active
-  height calc(100% - 4px)
-  border-top 2px solid
-  border-bottom #fff 2px solid
 .navbar-left
   margin-right 20px
 a
@@ -56,5 +49,9 @@ a img.logo
   margin-right 15px
 span
   color #fff
+.navbar-left span
   font-size 1.1rem
+.navbar-center span
+  font-size 1rem
+  font-weight 600
 </style>
