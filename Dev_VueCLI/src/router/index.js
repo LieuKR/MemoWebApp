@@ -1,12 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AuthView from '../views/auth/AuthView.vue'
+import MemoView from '../views/memo/MemoView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/memo',
+    component: MemoView,
+    children: [
+      {
+        path: 'list',
+        component: () => import(/* webpackChunkName: "memo" */ '../views/memo/component-write.vue')
+      },
+      {
+        path: 'write',
+        component: () => import(/* webpackChunkName: "memo" */ '../views/memo/component-list.vue')
+      }
+    ]
   },
   {
     path: '/auth',

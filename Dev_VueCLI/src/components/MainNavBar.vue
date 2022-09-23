@@ -7,6 +7,9 @@
       </router-link>
     </div>
     <div class="navbar-center">
+      <router-link to="/memo/list">
+        <span>메모</span>
+      </router-link>
       <router-link to="/auth/login">
         <span>로그인 / 회원가입</span>
       </router-link>

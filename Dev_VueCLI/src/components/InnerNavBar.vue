@@ -39,6 +39,7 @@ nav
   border-bottom #fff 2px solid
 .navbar-left
   margin-right 20px
+  min-width: 145px;
 a
   height 100%
   display inline-flex
