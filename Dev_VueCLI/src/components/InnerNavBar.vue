@@ -3,12 +3,9 @@
     <div class="navbar-left">
       <span class="title">{{title}}</span>
     </div>
-    <div class="navbar-center">
-      <router-link to="/auth/login">
-        <span>Login</span>
-      </router-link>
-      <router-link to="/auth/signin">
-        <span>Signin</span>
+    <div class="navbar-center" v-for="page in pagetabs" :key=page.name>
+      <router-link :to="page.href">
+        <span>{{ page.name }}</span>
       </router-link>
     </div>
   </nav>
@@ -17,7 +14,10 @@
 <script>
 export default {
   name: 'MainNavBar',
-  props: ['title']
+  props: {
+    title: String,
+    pagetabs: Array
+  }
 }
 </script>
 
