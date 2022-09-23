@@ -23,7 +23,6 @@
 
 <script>
 export default {
-  name: 'LoginView',
   data () {
     return {
       email: null,
@@ -40,7 +39,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

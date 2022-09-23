@@ -1,17 +1,10 @@
 <template>
-  <div class="home">
-    <LoginView/>
-  </div>
+  <div class="home">홈페이지</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import LoginView from '@/components/LoginView.vue'
-
 export default {
-  name: 'HomeView',
   components: {
-    LoginView
   }
 }
 </script>

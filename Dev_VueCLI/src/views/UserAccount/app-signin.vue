@@ -1,7 +1,7 @@
 <template>
   <div class="request-box">
     <div class="header">
-      <span class="title">로그인</span>
+      <span class="title">회원가입</span>
     </div>
     <div class="body">
       <div class="inputbox input-text">
@@ -16,18 +16,24 @@
           <input id="input-password" type="password" v-model="password" maxlength="50">
         </div>
       </div>
-      <button class="submitbox" @click="submit">로그인</button>
+      <div class="inputbox input-text">
+        <label for="input-name">닉네임</label>
+        <div>
+          <input id="input-name" type="name" v-model="name" autocomplete="name" maxlength="50">
+        </div>
+      </div>
+      <button class="submitbox" @click="submit">회원가입</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LoginView',
   data () {
     return {
       email: null,
-      password: null
+      password: null,
+      name: null
     }
   },
   methods: {
@@ -35,12 +41,9 @@ export default {
       var data = {}
       data.email = this.email
       data.password = this.password
+      data.name = this.name
       console.log(data)
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

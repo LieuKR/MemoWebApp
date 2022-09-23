@@ -7,6 +7,12 @@
       </router-link>
     </div>
     <div class="navbar-center">
+      <router-link to="/login">
+        <span>Login</span>
+      </router-link>
+      <router-link to="/signin">
+        <span>Signin</span>
+      </router-link>
       <router-link to="/about">
         <span>About</span>
       </router-link>
