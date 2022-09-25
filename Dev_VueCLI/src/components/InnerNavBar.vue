@@ -57,4 +57,5 @@ span.title
   line-height 0
   font-size 0.9rem
   font-weight 600
+  cursor default
 </style>

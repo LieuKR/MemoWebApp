@@ -43,7 +43,7 @@ const routes = [
     children: [
       {
         path: 'wholeapp',
-        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/route-wholeapp.vue')
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-wholeapp.vue')
       },
       {
         path: 'client',
@@ -55,7 +55,7 @@ const routes = [
       },
       {
         path: 'db',
-        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/route-db.vue')
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-db.vue')
       }
     ]
   }
