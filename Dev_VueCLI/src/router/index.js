@@ -15,11 +15,11 @@ const routes = [
     children: [
       {
         path: 'list',
-        component: () => import(/* webpackChunkName: "memo" */ '../views/memo/component-write.vue')
+        component: () => import(/* webpackChunkName: "memo" */ '../views/memo/route-list.vue')
       },
       {
         path: 'write',
-        component: () => import(/* webpackChunkName: "memo" */ '../views/memo/component-list.vue')
+        component: () => import(/* webpackChunkName: "memo" */ '../views/memo/route-write.vue')
       }
     ]
   },
@@ -29,11 +29,11 @@ const routes = [
     children: [
       {
         path: 'login',
-        component: () => import(/* webpackChunkName: "auth" */ '../views/auth/app-login.vue')
+        component: () => import(/* webpackChunkName: "auth" */ '../views/auth/route-login.vue')
       },
       {
         path: 'signin',
-        component: () => import(/* webpackChunkName: "auth" */ '../views/auth/app-signin.vue')
+        component: () => import(/* webpackChunkName: "auth" */ '../views/auth/route-signin.vue')
       }
     ]
   },
@@ -43,19 +43,19 @@ const routes = [
     children: [
       {
         path: 'wholeapp',
-        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-wholeapp.vue')
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/route-wholeapp.vue')
       },
       {
         path: 'client',
-        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-client.vue')
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/route-client.vue')
       },
       {
         path: 'server',
-        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-server.vue')
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/route-server.vue')
       },
       {
         path: 'db',
-        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/description-db.vue')
+        component: () => import(/* webpackChunkName: "appinfo" */ '../views/appinfo/route-db.vue')
       }
     ]
   }
