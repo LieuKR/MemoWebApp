@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div style="margin: 30px 10px">
+    <viewerMemo/>
     <div class="memo-container">
-      <memoComponent :memolist="temp_memoinfo"/>
+      <previewMemo :memolist="this.$store.state.memoLists"/>
       <div class="memo-addnew">
         <img class="plus_icon" src="@/assets/icon_plus_1.svg">
       </div>
@@ -10,27 +11,21 @@
 </template>
 
 <script>
-import memoComponent from './component-memo.vue'
+import previewMemo from './component-preview.vue'
+import viewerMemo from './component-viewer.vue'
 
 export default {
   data () {
     return {
-      temp_memoinfo: [
-        { id: '1', title: '', content: 'this is memo1' },
-        { id: '2', title: 'title2', content: 'this is memo2' },
-        { id: '3', title: 'title3', content: 'this is memo3' },
-        { id: '4', title: 'title4', content: 'this is memo4' },
-        { id: '5', title: 'title5', content: 'this is memo5' },
-        { id: '6', title: 'title6', content: 'this is memo6' },
-        { id: '7', title: 'title7', content: 'this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7' },
-        { id: '6', title: 'title6', content: 'this is memo6' },
-        { id: '7', title: 'title7', content: 'this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7' },
-        { id: '7', title: 'title7', content: 'this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7this is memo7' },
-        { id: '6', title: 'title6', content: 'this is memo6' }]
+      memo_color: this.$store.state.memoColors
     }
   },
   components: {
-    memoComponent
+    previewMemo,
+    viewerMemo
+  },
+  created () {
+    this.$store.dispatch('getMemoData')
   }
 }
 </script>
@@ -41,7 +36,6 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(210px, max-content))
   justify-content: center
   padding: initial
-  margin: 30px 10px
 .memo-addnew
   margin: 5px;
   border: white 5px solid;
@@ -53,4 +47,37 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 85px;
+</style>
+
+<style lang="stylus">
+.memo-color-yellow
+  background-color: v-bind('memo_color.yellow.background');
+  border-color: v-bind('memo_color.yellow.edge') !important;
+.memo-color-yellow .memo-header
+  background-color v-bind('memo_color.yellow.edge')
+.memo-color-red
+  background-color: v-bind('memo_color.red.background');
+  border-color: v-bind('memo_color.red.edge') !important;
+.memo-color-red .memo-header
+  background-color v-bind('memo_color.red.edge')
+.memo-color-blue
+  background-color: v-bind('memo_color.blue.background');
+  border-color: v-bind('memo_color.blue.edge') !important;
+.memo-color-blue .memo-header
+  background-color v-bind('memo_color.blue.edge')
+.memo-color-green
+  background-color: v-bind('memo_color.green.background');
+  border-color: v-bind('memo_color.green.edge') !important;
+.memo-color-green .memo-header
+  background-color v-bind('memo_color.green.edge')
+.memo-color-gray
+  background-color: v-bind('memo_color.gray.background');
+  border-color: v-bind('memo_color.gray.edge') !important;
+.memo-color-gray .memo-header
+  background-color v-bind('memo_color.gray.edge')
+.memo-color-purple
+  background-color: v-bind('memo_color.purple.background');
+  border-color: v-bind('memo_color.purple.edge') !important;
+.memo-color-purple .memo-header
+  background-color v-bind('memo_color.purple.edge')
 </style>

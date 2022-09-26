@@ -16,7 +16,6 @@ export default {
 <style lang="stylus">
 body
   margin 0
-  min-height 100vh
   background-color #000
   color #fff
 #app
